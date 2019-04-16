@@ -103,10 +103,10 @@ We use a small script that will collect everything from the files, sort it and t
 ``gcc main.c``
 ``./a.out``
 After run we get:
- ![
+``
 MY PASSWORD IS: Iheartpwnage
 Now SHA-256 it and submit
-](/imgs/img8.png)
+``
 Encrypt it in SHA-256 and get:
 ``330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4``
 ## Attempt to login via ssh.
