@@ -16,6 +16,7 @@ The bomb file is a binary, at startup you need to go through several phases to d
 
 ## Playing in a bomb.
 First of all, do `` nm bomb`` to get the binary name table.
+
 ![
 08048b20 T phase_1
 08048b48 T phase_2
