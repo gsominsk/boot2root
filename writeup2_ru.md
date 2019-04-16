@@ -196,7 +196,7 @@ The input does not work, but based on the fact that the previous passwords were 
 
 ``password: 646da671ca01bb5d84dbb5fb2238dc8e``
 
-## Вход под @zaz.
+## Login with username @zaz.
 Having entered under the thor we receive ``exploit_me`` file.
 
 The first thing we do is `` nm exploit_me`` to know what to disassemble.
