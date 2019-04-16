@@ -19,7 +19,6 @@ nmap 172.16.101.1-255
 ![
 PORT   STATE SERVICE
 22/tcp open  ssh
-
 Nmap scan report for 172.16.101.128
 Host is up (0.0012s latency).
 Not shown: 994 filtered ports
@@ -30,7 +29,6 @@ PORT    STATE SERVICE
 143/tcp open  imap
 443/tcp open  https
 993/tcp open  imaps
-
 Nmap done: 255 IP addresses (2 hosts up) scanned in 27.37 seconds
 ](/imgs/img2.png)
 ``172.16.101.128 нужный нам IP`` 
