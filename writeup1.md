@@ -8,7 +8,7 @@ ifconfig - для поиска нужного IP адреса на пк.
 vmnet8: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	ether 00:50:56:c0:00:08
 	inet 172.16.101.1 netmask 0xffffff00 broadcast 172.16.101.255
-](https://github.com/gsominsk/boot2root/blob/master/imgs/img1.png)
+](/imgs/img1.png)
 
 ## Прогонка портов через nmap для получения сведений о нужном нам адресе.
 
@@ -32,7 +32,7 @@ PORT    STATE SERVICE
 993/tcp open  imaps
 
 Nmap done: 255 IP addresses (2 hosts up) scanned in 27.37 seconds
-](/img2.png)
+](/imgs/img2.png)
 ``172.16.101.128 нужный нам IP`` 
 
 ## Проверка всех ссылок по адресу.
@@ -51,12 +51,12 @@ make
 ### Первый ввод предположительно были перепутаны строки для логина и пароля.
 ![
 Oct 5 08:45:29 BornToSecHackMe sshd[7547]: Failed password for invalid user !q\]Ej?*5K5cy*AJ from 161.202.39.38 port 57764 ssh2
-](/img3.png)
+](/imgs/img3.png)
 
 ### Во втором ввод логина был правильный.
 ![
 Oct 5 09:21:01 BornToSecHackMe CRON[9111]: pam_unix(cron:session): session closed for user lmezard 
-](/img4.png)
+](/imgs/img4.png)
 
 ## Попытка войти на почту с полученным логином и паролем.
 Переходим по ссылке ``https://172.16.101.128/webmail/src/login.php``
@@ -64,7 +64,7 @@ Oct 5 09:21:01 BornToSecHackMe CRON[9111]: pam_unix(cron:session): session close
 Делаем поиск ника ``lmezard`` в гугле :
 ![
 Google info about lmezard. Laurie Mezard
-](/img5.png)
+](/imgs/img5.png)
 Нам выдало полное имя Laurie Mezard. Пробуем разные варианты для логина.
 Нужный нам вариант ``laurie@borntosec.net``.
 Входим на мейл ``login: laurie@borntosec.net`` и ``password: !q\]Ej?*5K5cy*AJ``
@@ -73,7 +73,7 @@ Google info about lmezard. Laurie Mezard
 Hey Laurie,
 You cant connect to the databases now. Use root/Fg-'kKXBj87E:aJ$
 Best regards.
-](/img6.png)
+](/imgs/img6.png)
 Находим пароль и логин для базы данных ``login: root`` и ``password: Fg-'kKXBj87E:aJ$``
 ## Попытка входа в phpmyadmin.
 Переходим по ссылке ``https://172.16.101.128/phpmyadmin/``
@@ -93,7 +93,7 @@ Best regards.
 ![
 README.md
 fun
-](/img7.png)
+](/imgs/img7.png)
 Теперь скидываем файл себе ``get fun ~/boot2root/fun``
 В файле куча разной информации, если посмотреть тип файла ``file fun`` узнаем что это архив.
 Разархивируем архив ``tar xvf fun``
@@ -107,7 +107,7 @@ fun
  ![
 MY PASSWORD IS: Iheartpwnage
 Now SHA-256 it and submit
-](/img8.png)
+](/imgs/img8.png)
 Шифруем его в SHA-256 и получаем :
 ``330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4``
 
