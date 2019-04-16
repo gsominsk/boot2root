@@ -8,7 +8,7 @@ ifconfig - для поиска нужного IP адреса на пк.
 vmnet8: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	ether 00:50:56:c0:00:08
 	inet 172.16.101.1 netmask 0xffffff00 broadcast 172.16.101.255
-](/img1.png)
+](https://github.com/gsominsk/boot2root/blob/master/imgs/img1.png)
 
 ## Прогонка портов через nmap для получения сведений о нужном нам адресе.
 
